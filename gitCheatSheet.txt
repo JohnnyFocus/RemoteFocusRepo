@@ -1,0 +1,3 @@
+* rm file.txt - update staging status to removed (-f : forces removal of file)()
+* git checkout [commit id] - makes current state of your repository just like it was when it received the id 
+* Add files that you do not want tracked to the .gitignore list 

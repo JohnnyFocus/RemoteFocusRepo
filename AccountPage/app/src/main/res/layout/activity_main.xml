@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/happyPlaceBtn"
+        android:layout_width="151dp"
+        android:layout_height="97dp"
+
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="Happy Place" />
+
+    <Button
+        android:id="@+id/shakeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/happyPlaceBtn"
+        android:layout_alignEnd="@+id/happyPlaceBtn"
+        android:layout_marginEnd="-13dp"
+        android:layout_marginBottom="22dp"
+        android:text="Steak and Shake" />
+
+    <Button
+        android:id="@+id/bistroButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shakeButton"
+        android:layout_alignEnd="@+id/shakeButton"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        android:text="Wynee's Bistro" />
+
+    <Button
+        android:id="@+id/tutuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/happyPlaceBtn"
+        android:layout_alignEnd="@+id/happyPlaceBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-14dp"
+        android:text="Tutus Cyber Cafe" />
+
+    <Button
+        android:id="@+id/underCafButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bistroButton"
+        android:layout_alignEnd="@+id/bistroButton"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="26dp"
+        android:text="UnderCaf" />
+
+    <Button
+        android:id="@+id/buckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutuButton"
+        android:layout_alignEnd="@+id/tutuButton"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="38dp"
+        android:text="Buck Stop" />
+</RelativeLayout>

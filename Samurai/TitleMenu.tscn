@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://start_button.gd" type="Script" id=1]
+[ext_resource path="res://PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sound/2019-12-11_-_Retro_Platforming_-_David_Fesliyan(1).wav" type="AudioStream" id=3]
+[ext_resource path="res://quit_button.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2.09265
+margin_top = -4.18515
+margin_right = 319.907
+margin_bottom = 174.815
+color = Color( 0.0509804, 0.282353, 0.423529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 51.3578
+margin_top = 27.6542
+margin_right = 165.358
+margin_bottom = 47.6542
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "SAMURAI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit_button" type="Button" parent="."]
+margin_left = 115.791
+margin_top = 118.581
+margin_right = 207.791
+margin_bottom = 140.581
+custom_fonts/font = SubResource( 2 )
+text = "QUIT"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start_button" type="Button" parent="."]
+margin_left = 115.791
+margin_top = 81.6115
+margin_right = 207.791
+margin_bottom = 103.612
+custom_fonts/font = SubResource( 3 )
+text = "START"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+autoplay = true
+[connection signal="pressed" from="quit_button" to="quit_button" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="start_button" to="start_button" method="_on_start_button_pressed"]
