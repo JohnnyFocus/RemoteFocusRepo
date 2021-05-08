@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://platform_metroidvania asset pack v1.01/miscellaneous sprites/wood_slab_middle.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://HUD.gd" type="Script" id=24]
 [ext_resource path="res://platform_metroidvania asset pack v1.01/hud elements/lifes_icon.png" type="Texture" id=25]
 [ext_resource path="res://sound/Hope.wav" type="AudioStream" id=26]
+[ext_resource path="res://sound/mixkit-arcade-video-game-bonus-2044.wav" type="AudioStream" id=27]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -2192,6 +2193,18 @@ position = Vector2( -252, 60 )
 [node name="coin6" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 40, 12 )
 
+[node name="coin7" parent="Coins" instance=ExtResource( 21 )]
+position = Vector2( -94.9999, 27.113 )
+
+[node name="coin8" parent="Coins" instance=ExtResource( 21 )]
+position = Vector2( 59.9616, -22.2636 )
+
+[node name="coin9" parent="Coins" instance=ExtResource( 21 )]
+position = Vector2( 105.967, 42.9912 )
+
+[node name="coin10" parent="Coins" instance=ExtResource( 21 )]
+position = Vector2( 173.339, 36.639 )
+
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 
 [node name="ForeGroundRocks" type="ParallaxLayer" parent="ParallaxBackground2"]
@@ -2244,6 +2257,12 @@ editor_draw_limits = true
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 0.268997, 0.340523 )
 
+[node name="Slime1" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 48.5283, 79.5002 )
+
+[node name="Slime2" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 174.739, 105.901 )
+
 [node name="_pass_through_tiles" type="TileMap" parent="."]
 show_behind_parent = true
 light_mask = 2
@@ -2255,7 +2274,7 @@ cell_clip_uv = true
 collision_layer = 2
 collision_mask = 17
 format = 1
-tile_data = PoolIntArray( 196632, 24, 0, 196633, 25, 0, 196634, 25, 0, 196635, 26, 0, 262144, -1610612711, 0, 262167, 11, 0, 262168, 62, 0, 262169, -1073741788, 0, 262170, -1073741788, 0, 262171, 61, 0, 327680, -1610612711, 0, 327700, 9, 0, 327704, 62, 0, 327705, 18, 0, 327706, 20, 0, 327707, 61, 0, 327708, 69, 0, 393217, 25, 0, 393218, 25, 0, 393219, 25, 0, 393240, 62, 0, 393241, -1073741788, 0, 393242, -1073741788, 0, 393243, 61, 0, 458753, 25, 0, 458754, 25, 0, 458755, 25, 0, 458756, 25, 0, 458757, 25, 0, 458768, -1073741799, 0, 458776, 62, 0, 458777, -1073741788, 0, 458778, -1073741788, 0, 458779, 61, 0, 524288, -1073741797, 0, 524304, 1610612763, 0, 524310, -1073741797, 0, 524311, 64, 0, 524312, 64, 0, 524313, 64, 0, 524314, 25, 0, 524315, 64, 0, 524324, 69, 0, 524325, 69, 0, 524326, 69, 0, 524327, 69, 0, 589832, -1610612700, 0, 589833, -1610612700, 0, 589834, -1610612700, 0, 589835, -1610612700, 0, 589836, -1610612700, 0, 589837, -1610612700, 0, 589838, -1610612700, 0, 589839, -1610612700, 0, 589840, -1610612700, 0, 589841, -1610612700, 0, 589842, -1610612700, 0, 589843, -1610612700, 0, 589844, -1610612700, 0, 589860, -1073741795, 0, 589861, -1073741795, 0, 589862, -1073741795, 0, 589863, -1073741795, 0, 655367, -1610612700, 0, 655368, -1610612700, 0, 655369, -1610612700, 0, 655370, -1610612700, 0, 655372, -1610612700, 0, 655373, -1610612700, 0, 655374, -1610612700, 0, 655375, -1610612700, 0, 655376, -1610612700, 0, 655377, -1610612700, 0, 655378, -1610612700, 0, 655379, -1610612700, 0, 655380, -1610612700, 0, 655381, -1610612700, 0, 720901, -1610612700, 0, 720902, -1610612700, 0, 720903, -1610612700, 0, 720904, -1610612700, 0, 720905, -1610612700, 0, 720906, -1610612700, 0, 720907, -1610612700, 0, 720908, -1610612700, 0, 720909, -1610612700, 0, 720910, -1610612700, 0, 720911, -1610612700, 0, 720912, -1610612700, 0, 720913, -1610612700, 0, 720914, -1610612700, 0, 720915, -1610612700, 0, 720916, -1610612700, 0, 720917, -1610612700, 0, 720918, -1610612700, 0, 720919, -1610612700, 0, 720920, -1610612700, 0, 786442, -1610612700, 0, 786443, -1610612700, 0, 786444, -1610612700, 0, 786445, -1610612700, 0, 786446, -1610612700, 0, 786447, -1610612700, 0, 786448, -1610612700, 0, 786449, -1610612700, 0, 786450, -1610612700, 0, 786451, -1610612700, 0, 786452, -1610612700, 0, 851980, 27, 0, 851981, 27, 0, 851982, 27, 0, 851983, 27, 0, 851984, 27, 0, 851985, 27, 0 )
+tile_data = PoolIntArray( 196632, 24, 0, 196633, 25, 0, 196634, 25, 0, 196635, 26, 0, 262144, -1610612711, 0, 262167, 11, 0, 262168, 62, 0, 262169, -1073741788, 0, 262170, -1073741788, 0, 262171, 61, 0, 327680, -1610612711, 0, 327700, 9, 0, 327704, 62, 0, 327705, 18, 0, 327706, 20, 0, 327707, 61, 0, 327708, 69, 0, 393217, 25, 0, 393218, 25, 0, 393219, 26, 0, 393240, 62, 0, 393241, -1073741788, 0, 393242, -1073741788, 0, 393243, 61, 0, 458753, 25, 0, 458754, 25, 0, 458755, 25, 0, 458756, 25, 0, 458757, 26, 0, 458768, -1073741799, 0, 458776, 62, 0, 458777, -1073741788, 0, 458778, -1073741788, 0, 458779, 61, 0, 524288, -1073741797, 0, 524304, 1610612763, 0, 524310, -1073741797, 0, 524311, 64, 0, 524312, 64, 0, 524313, 64, 0, 524314, 25, 0, 524315, 64, 0, 524324, 69, 0, 524325, 69, 0, 524326, 69, 0, 524327, 69, 0, 589832, -1610612700, 0, 589833, -1610612700, 0, 589834, -1610612700, 0, 589835, -1610612700, 0, 589836, -1610612700, 0, 589837, -1610612700, 0, 589838, -1610612700, 0, 589839, -1610612700, 0, 589840, -1610612700, 0, 589841, -1610612700, 0, 589842, -1610612700, 0, 589843, -1610612700, 0, 589844, -1610612700, 0, 589860, -1073741795, 0, 589861, -1073741795, 0, 589862, -1073741795, 0, 589863, -1073741795, 0, 655367, -1610612700, 0, 655368, -1610612700, 0, 655369, -1610612700, 0, 655370, -1610612700, 0, 655372, -1610612700, 0, 655373, -1610612700, 0, 655374, -1610612700, 0, 655375, -1610612700, 0, 655376, -1610612700, 0, 655377, -1610612700, 0, 655378, -1610612700, 0, 655379, -1610612700, 0, 655380, -1610612700, 0, 655381, -1610612700, 0, 720901, -1610612700, 0, 720902, -1610612700, 0, 720903, -1610612700, 0, 720904, -1610612700, 0, 720905, -1610612700, 0, 720906, -1610612700, 0, 720907, -1610612700, 0, 720908, -1610612700, 0, 720909, -1610612700, 0, 720910, -1610612700, 0, 720911, -1610612700, 0, 720912, -1610612700, 0, 720913, -1610612700, 0, 720914, -1610612700, 0, 720915, -1610612700, 0, 720916, -1610612700, 0, 720917, -1610612700, 0, 720918, -1610612700, 0, 720919, -1610612700, 0, 720920, -1610612700, 0, 786442, -1610612700, 0, 786443, -1610612700, 0, 786444, -1610612700, 0, 786445, -1610612700, 0, 786446, -1610612700, 0, 786447, -1610612700, 0, 786448, -1610612700, 0, 786449, -1610612700, 0, 786450, -1610612700, 0, 786451, -1610612700, 0, 786452, -1610612700, 0, 851980, 27, 0, 851981, 27, 0, 851982, 27, 0, 851983, 27, 0, 851984, 27, 0, 851985, 27, 0 )
 
 [node name="OneWayPass" type="StaticBody2D" parent="_pass_through_tiles"]
 collision_layer = 2
@@ -2293,12 +2312,6 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 131072, 22, 0, 131096, 30, 0, 196636, 9, 0, 262171, 22, 0, 393220, 13, 0, 393233, 5, 0, 393234, 7, 0, 393235, 8, 0, 393239, 22, 0, 458759, 20, 0, 458762, 14, 0, 458777, 20, 0, 458778, 19, 0, 458783, 20, 0, 458784, 19, 0 )
-
-[node name="Slime1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 48.7973, 79.8407 )
-
-[node name="Slime2" parent="." instance=ExtResource( 19 )]
-position = Vector2( 175.008, 106.242 )
 
 [node name="Fall Zone" type="Area2D" parent="."]
 position = Vector2( 4, 36 )
@@ -2386,8 +2399,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="xp_get" type="AudioStreamPlayer2D" parent="HUD"]
+stream = ExtResource( 27 )
+volume_db = -15.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
+volume_db = -25.0
 autoplay = true
 [connection signal="coin_collected" from="Coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin2" to="HUD" method="_on_coin_collected"]
@@ -2395,4 +2413,8 @@ autoplay = true
 [connection signal="coin_collected" from="Coins/coin4" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin5" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin7" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin8" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin9" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin10" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Fall Zone" to="Player" method="_on_Fall_Zone_body_entered"]

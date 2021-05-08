@@ -6,7 +6,6 @@ const gravity = 20
 export var detects_cliffs = true
 
 
-
 func _ready():
 	if direction == 1: 
 		$AnimatedSprite.flip_h = true
@@ -27,6 +26,8 @@ func _physics_process(delta):
 
 func _on_top_checker_body_entered(body):
 	$AnimatedSprite.play("death")
+	$slime_death.play()
+	#add kill to counter
 	
 	set_collision_layer_bit(4,false)
 	set_collision_mask_bit(0,false)
@@ -35,10 +36,10 @@ func _on_top_checker_body_entered(body):
 	$sides_checker.set_collision_layer_bit(4,false)
 	$sides_checker.set_collision_mask_bit(0,false)
 	$Timer.start()
-	body.bounce()
+	body._bounce()
 	
 func _on_Timer_timeout():
-	queue_free() # Replace with function body.
+	queue_free() 
 
 func _on_sides_checker_body_entered(body):
-	body.ouch(position.x)
+	body._ouch(position.x)

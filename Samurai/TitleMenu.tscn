@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://start_button.gd" type="Script" id=1]
 [ext_resource path="res://PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://quit_button.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -22,10 +26,8 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -2.09265
-margin_top = -4.18515
-margin_right = 319.907
-margin_bottom = 174.815
+margin_right = 320.0
+margin_bottom = 180.0
 color = Color( 0.0509804, 0.282353, 0.423529, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,6 +44,19 @@ text = "SAMURAI"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="title"]
+margin_left = -17.6081
+margin_top = 30.8841
+margin_right = 70.392
+margin_bottom = 82.8841
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 4 )
+text = "Move with 
+arrow keys.
+
+Shoot with
+Spacebar."
 
 [node name="quit_button" type="Button" parent="."]
 margin_left = 115.791

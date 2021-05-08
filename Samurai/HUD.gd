@@ -6,11 +6,14 @@ var coins = 0
 func _ready():
 	$Coins.text = String(coins)
 	$enemy.text = String(kills)
-	
+	if coins == 10:
+		get_tree().change_scene("res://LevelWin.tscn")
+		
 func _on_coin_collected():
+	$xp_get.play()
 	coins = coins + 1
 	_ready()
 	
-func _on_kills_collected():
+func _on_enemy_killed():
 	kills = kills + 1
 	_ready()

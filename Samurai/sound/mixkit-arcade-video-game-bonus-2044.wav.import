@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-arcade-video-game-bonus-2044.wav-6a22671ab879e7b404556eddfc658cbb.sample"
+
+[deps]
+
+source_file="res://sound/mixkit-arcade-video-game-bonus-2044.wav"
+dest_files=[ "res://.import/mixkit-arcade-video-game-bonus-2044.wav-6a22671ab879e7b404556eddfc658cbb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -4,16 +4,13 @@ const speed = 120
 const gravity = 20
 const jump_power = -350
 const BOMB = preload("res://bomb.tscn")
-var coins = 0
+
 var velocity = Vector2()
 var on_ground = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	if coins == 5: 
-		get_tree().change_scene("res://TitleMenu.tscn")
-	
+func _physics_process(delta):	
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = speed
 		$AnimatedSprite.play("running")
@@ -35,6 +32,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 			velocity.y = jump_power
+			$sound_jump.play()
 			on_ground = false
 			
 	if Input.is_action_just_pressed("ui_accept"):
@@ -61,13 +59,12 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-func _on_Fall_Zone_body_entered(body):
-	get_tree().change_scene("res://TitleMenu.tscn")
-	
-func _add_coin():
-	coins = coins + 1 
 
-func ouch(var enemyposx):
+
+func _on_Fall_Zone_body_entered(body):
+	get_tree().change_scene("res://DeathScreen.tscn")
+	$fall_death.play()
+func _ouch(var enemyposx):
 	set_modulate(Color(1,0.3,0.3,0.3))
 	velocity.y = jump_power *0.7
 	
@@ -81,9 +78,10 @@ func ouch(var enemyposx):
 	
 	$Timer.start()
 	
-func bounce():
+func _bounce():
 	velocity.y = jump_power *0.8
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Stage 1.tscn")
+	pass
+	#get_tree().change_scene("res://Stage 1.tscn")
